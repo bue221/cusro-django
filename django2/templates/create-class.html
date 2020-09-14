@@ -1,0 +1,23 @@
+{% extends 'layout.html' %}
+
+{% block title  %} Crear metodo{% endblock %}
+
+{%  block headerTitle %}
+Crear class
+{% endblock  %}
+
+
+{% block content %}
+<div class='form'>
+        <h1>Crear Articulo</h1>
+        <form action="" method='post' class='create' >
+
+                {% if form.errors %}
+                <h1 style='color: red'>Errores en su formulario</h1>
+                {% endif %}
+                {% csrf_token  %}
+                {{ form  }}
+                <input type="submit" value='Guardar'>
+        </form>
+</div>
+{% endblock %}

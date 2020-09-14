@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block title  %} Articulos {% endblock %}
+
+{%  block headerTitle %}
+Articulos
+{% endblock  %}
+
+
+{% block content %}
+<h1 class='ar-title'>Articulos</h1>
+
+{% if messages %}
+{% for message in messages %}
+<h3 style='
+padding: 2rem;
+background: green;
+text-align: center;
+color: white;
+'>{{message}}</h3>
+{% endfor %}
+{% endif%}
+
+<div>
+        {% for articulo in articulo  %}
+        {% if articulo.public %}
+        <div class='articulo'>
+                <h1>{{articulo.id}}-{{articulo.title}} </h1>
+                {% if articulo.img %}
+                <img src="{{ articulo.img.url }}" alt="">
+                {% endif %}
+                <p>publico</p>
+                <p class='date'>{{articulo.created_at}} </p>
+                <p>{{articulo.content}}</p>
+                <a href="{% url 'borrar' id=articulo.id  %}">eliminar</a>
+        </div>
+        {% else %}
+        <div class='articulo'>
+                <h1> {{articulo.title}} </h1>
+                {% if articulo.img %}
+                <img src="{{ articulo.img.url }}" alt="">
+                {% endif %}
+                <p>privado</p>
+                <p class='date'>{{articulo.created_at}} </p>
+                <p>{{articulo.content}}</p>
+                <a href="{% url 'borrar' id=articulo.id  %}">eliminar</a>
+        </div>             
+        {% endif %}
+        {% endfor %}
+</div>
+
+{% endblock %}

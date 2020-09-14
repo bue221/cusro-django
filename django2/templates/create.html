@@ -1,0 +1,31 @@
+{% extends 'layout.html' %}
+
+{% block title  %} Crear {% endblock %}
+
+{%  block headerTitle %}
+Crear articulos
+{% endblock  %}
+
+
+{% block content %}
+<div class='form'>
+        <h1>Crear Articulo</h1>
+        <form action="{% url 'create'  %}" method='post' class='create' >
+
+                {% csrf_token  %}
+
+                <label for="title">Titulo</label>
+                <input type="text" name='title' placeholder='Introduce un titulo'>        
+
+                <label for="content">Contenido</label>
+                <textarea id="content" name="content" cols="30" rows="10"></textarea>
+
+                <label for="public">Publicar</label>
+                <select id="public" name="public">
+                        <option value="1">Si</option>
+                        <option value="0">No</option>
+                </select>
+                <input type="submit" value='Guardar'>
+        </form>
+</div>
+{% endblock %}

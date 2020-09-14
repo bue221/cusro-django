@@ -1,0 +1,117 @@
+*{
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+}
+
+header{
+        background-image:linear-gradient(rgba(0, 0, 0, 0.3), rgba(196 ,208 ,255,  0.7)), url(https://kodytechnolab.com/img/blog/big/popular-websites-built-django-framework.jpg);
+        background-size: cover;
+        height: 700px;
+}
+
+.header-title{
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 20%;
+        align-items: center;
+}
+
+nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 1rem;
+        background: #fff;
+        color: black !important;
+        border-bottom: 1px solid #ececec;
+}
+
+.footer{
+        margin-top: 2rem;
+        border-top: 2px solid #F3F3F3;
+        padding: 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+}
+
+.items{
+        display: flex;
+        justify-content: space-between;
+        gap: 3rem;
+        list-style: none;
+}
+
+.items>li>a{
+        color: #757575;
+        font-size: larger;
+        font-weight: bold;
+}
+
+.items>li>a:hover{
+        color:#9FB7E5;
+}
+
+.logo{
+        display: flex;
+        align-items: center;
+}
+
+.logo > img{
+        width: 30px;
+        margin-right: 1rem;
+}
+
+.articulo{
+        margin: 2rem 5rem;
+        padding: 2rem;
+        gap: .3rem;
+        display: flex;
+        flex-direction: column;
+        border: 1px solid #F3F3F3;
+}
+
+.articulo >a{
+        color: blue;
+}
+
+.ar-title{
+        text-align: center;
+        margin-top: 3rem;
+        font-size: 4rem;
+}
+
+.form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin: 3rem 0;
+}
+
+.create{
+        width: 50%;
+}
+
+.create > input,textarea{
+        width: 100%;
+        margin-bottom: 1rem;
+}
+
+.create > input[type='submit']{
+        padding: 1rem;
+        background: green;
+        color: white;
+        margin-left: 2rem;
+        width: auto;
+        border: none;
+        border-radius: 6px;
+}
+
+
+.create > input[type='submit']:hover{
+        background: #2BA977;
+}
